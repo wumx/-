@@ -1,0 +1,31 @@
+[
+	{
+		"id":"0",
+		"name":"华为（HUAWEI）P9（EVA-AL10）琥珀金 4G+64GB内存 全网通4G手机 双卡双待",
+		"price":"3688",
+		"img1":"img_details/SP_3020_302001480024_01_10008.jpg",
+		"img2":"img_details/SP_3020_302001480024_02_10008.jpg",
+		"img3":"img_details/SP_3020_302001480024_03_10008.jpg",
+		"img4":"img_details/SP_3020_302001480024_04_10008.jpg",
+		"img5":"img_details/SP_3020_302001480024_05_10008.jpg"
+	},
+	{
+		"id":"1",
+		"name":"苹果（Apple）MacBook Air MMGG2CH/A 13.3英寸宽屏笔记本电脑",
+		"price":"6500",
+		"img1":"img_details/SP_3020_302001402709_01_10008.jpg",
+		"img2":"img_details/SP_3020_302001402709_02_10008.jpg",
+		"img3":"img_details/SP_3020_302001402709_03_10008.jpg",
+		"img4":"img_details/SP_3020_302001402709_04_10008.jpg",
+		"img5":"img_details/SP_3020_302001402709_05_10008.jpg"
+	},
+	{
+		"id":"2",
+		"price":"6500",
+		"img1":"img_details/SP_3020_302001480024_01_10008.jpg",
+		"img2":"img_details/SP_3020_302001480024_02_10008.jpg",
+		"img3":"img_details/SP_3020_302001480024_03_10008.jpg",
+		"img4":"img_details/SP_3020_302001480024_04_10008.jpg",
+		"img5":"img_details/SP_3020_302001480024_05_10008.jpg"
+	}
+]

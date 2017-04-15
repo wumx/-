@@ -1,0 +1,229 @@
+
+.right-sidebar{
+	width:320px;
+	position: fixed;
+	top:0;
+	right: -280px;
+	z-index: 999;
+}
+.r0{
+	right:0;
+}
+.right-sidebar-main{
+	position: relative;
+	width:38px;
+	height:790px;
+	background: #333;
+	float:left;
+}
+.right-sidebar-main ul{
+	position: absolute;
+	top:170px;
+} 
+.right-sidebar-main ul li{
+	cursor: pointer;
+}
+.sidecss{
+	width:38px;
+	height:40px;
+	overflow: hidden;
+}
+.right-sidebar-main .car{
+	height:185px;
+	width: 43px;
+	position: relative;
+}
+.right-sidebar-main .car i{
+	display: block;
+	width: 25px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	font-size:14px;
+	text-align: center;
+	overflow: hidden;
+	border-radius: 50%;
+	color:#fff;
+	position: absolute;
+	bottom: 40px;
+	margin-left: 7px;
+	background: #D62233;
+}
+.right-sidebar-main .side1{
+	background: url(../right-sideBar/1.png) no-repeat;
+}
+.right-sidebar-main .side2{
+	background: url(../right-sideBar/2.png) no-repeat -5px 0px;
+}
+.right-sidebar-main .side3{
+	background: url(../right-sideBar/3.png) no-repeat;
+}
+.right-sidebar-main .side4{
+	background: url(../right-sideBar/4.png) no-repeat;
+}
+.right-sidebar-main .side5{
+	background: url(../right-sideBar/5.png) no-repeat;
+}
+.right-sidebar-main .side6{
+	background: url(../right-sideBar/6.png) no-repeat;
+}
+.right-sidebar-main .side7{
+	background: url(../right-sideBar/7.png) no-repeat;
+}
+.right-sidebar-main .side8{
+	background: url(../right-sideBar/8.png) no-repeat;
+}
+/*购物车*/
+.shop-car {
+	width:280px;
+	height:800px;
+	float: left;
+	background: #fff;
+	position: relative;
+}
+.shop-car .title{
+	height:40px;
+	background: #eee;
+	padding-left:10px;
+	padding-top:10px;
+	cursor: pointer;
+}
+.shop-car .title span{
+	display: block;
+	float: left;
+	width:36px;
+	height:27px;
+	background: url(../right-sideBar/car1.png) no-repeat;
+}
+.shop-car .title i{
+	display: block;
+	float: right;
+	width: 32px;
+	height:27px;
+	background: url(../right-sideBar/car2.png) no-repeat;
+}
+.shop-car ul li{
+	height:50px;
+	padding:10px 0 10px 10px;
+	width:100%;	
+}
+.shop-car ul li .car-img{
+	border:1px solid #ddd;
+	width:48px;
+	height:48px;
+	overflow: hidden;
+	float:left;
+}
+.shop-car ul li .car-img img{
+	display: block;
+	width: 100%;
+	height:100%;
+}
+.shop-car ul li .product-news{
+	float:left;
+	width:96px;
+	overflow: hidden;
+	margin-left: 10px;
+}
+.shop-car .product-news a{
+	display: block;
+	height:32px;
+	font-size: 12px;
+	overflow: hidden;
+	line-height: 16px;
+}
+.shop-car .product-news a:hover{
+	color:#DA0000;
+}
+.shop-car .product-news .sl-show{
+	font-size: 12px;
+}
+.shop-car .product-news .sl-show i{
+	font-style: normal;
+}
+
+.shop-car .product-news .s2-show{
+	height:16px;
+}
+.shop-car .product-news .s2-show i{
+		display: block;
+		width:16px;
+		height:16px;
+		float:left;
+		cursor: pointer;
+}
+.shop-car .product-news .s2-show .car-cut{
+	background: url(../right-sideBar/bian-img-3.png) no-repeat;
+}
+.shop-car .product-news .s2-show .car-add{
+	background: url(../right-sideBar/bian-img-4.png) no-repeat;
+}
+.shop-car .product-news .s2-show .s1{
+	display: block;
+	padding:0 8px;
+	float: left;
+	line-height: 16px;
+}
+
+
+.shop-car ul li .product-price{
+	float: right;
+}
+.shop-car ul li .product-price span{
+	display: block;
+	margin-right: 20px;
+}
+.shop-car ul li .product-price span i{
+	display: block;
+	float: left;
+	font-style: normal;
+	color: #DA0000;
+}
+.shop-car ul li .product-price span b{
+	display: block;
+	float: left;
+	font-style: normal;
+	color: #DA0000;
+}
+.shop-car ul li .product-price em{
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-top:8px;
+	float: right;
+	margin-right: 30px;
+	background: url(../right-sideBar/X_0.png) no-repeat;
+}
+.shop-car ul li .hide{
+	display: none !important;
+}
+/*底部*/
+.shop-car .fot{
+	height:100px;
+	width: 280px;
+	position: absolute;
+	bottom: 0;
+	background: #eee
+}
+.shop-car .fot .gengral{
+	 height: 36px;
+    color: #333;
+    font-size: 12px;
+    line-height: 36px;
+    padding-left: 10px;
+    text-align: left 
+}
+.shop-car .fot .gengral span{
+	margin:0 5px;
+	color: #D62233;
+}
+.shop-car .fot .see-car{
+	display: block;
+	font-size: 16px;
+	width:260px;
+	height: 40px;
+	text-align: center;
+	color: #fff;
+	line-height: 40px;
+	background:#D62233; 
+}

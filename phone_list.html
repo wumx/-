@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>百联列表页</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/com.css"/>
+	<link rel="stylesheet" type="text/css" href="css/phone_list.css"/>
+	<link rel="stylesheet" href="css/right-sideBar.css" />
+	<link rel="stylesheet" href="css/bl-head.css" />
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/com.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/phone_list.js"></script>
+</head>
+<body>
+	<!-- 工具栏 -->
+	<div id="tools"></div>
+	<div id="header"></div>
+	<div id="shop-car"></div>
+	<div id="main">
+	<!-- 主体头部 -->
+		<div class="path clearfix">
+			<div class="path_left clearfix">
+				<a href="#">全部结果</a>
+				<div class="inp">
+					<input type="text" placeholder="在当前条件下搜索"/>
+					<input type="button" class="search" />
+				</div>
+			</div>
+			<div class="path_right">
+				共找到<b id="merchantCount">75</b>件商品
+			</div>
+		</div><!--path  end-->
+	<!--过滤工具栏  -->
+		<div class="filter">
+			<div class="filter-item clearfix">
+				<div class="filter_left">
+					相关分类
+				</div>
+				<div class="filter_right">
+					<a href="javascript:;">手机</a>
+					<a href="javascript:;">平板电视</a>
+					<a href="javascript:;">小米</a>
+				</div>
+			</div>
+			<div class="filter-item clearfix">
+				<div class="filter_left">
+					品牌
+				</div>
+				<div class="filter_right">
+				</div>
+			</div>
+			<div class="filter-item clearfix">
+				<div class="filter_left">
+					更多筛选项
+				</div>
+				<div class="filter_right">
+					<div class="rest">
+						<span>其他分类</span>
+						<ol class="clearfix">
+							<li><a href="javascript:;">手机数码</a></li>
+							<li><a href="javascript:;">家用电器</a></li>
+							<li><a href="javascript:;">食品</a></li><br />
+							<li><a href="javascript:;">运动户外</a></li>
+							<li><a href="javascript:;">图书/影音</a></li>
+							<li><a href="javascript:;">进口食品</a></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div> <!--过滤工具栏   end-->
+	<!-- sequence -->
+		<div class="sequence clearfix">
+			<div class="sequence_left">
+				<ul class="clearfix">
+					<li><a href="javascript:;" title="点击后恢复默认排序" class="clickA"><span>综合排序</span></a></li>
+					<li><a href="javascript:;" title="点击后销量从高到低"><span>销量</span><i class="i0"></i></a></li>
+					<li><a href="javascript:;" title="点击后价格从高到低"><span>价格</span><i class="i1"></i></a></li>
+					<li><a href="javascript:;" title="点击后评价从高到低"><span>评论</span><i class="i0"></i></a></li>
+					<li><a href="javascript:;" title="点击后销量从老到新"><span>新品</span></a></li>
+				</ul>	
+			</div>
+			<div class="sequence_center">
+				<input type="text" placeholder="￥最低价"/>
+				<span>-</span>
+				<input type="text" placeholder="￥最高价"/>
+			</div>
+			<div class="sequence_right">
+				<div class="label">
+					<label><input type="checkbox" /><span>仅显示有货</span></label>
+					<label><input type="checkbox" /><span>自营</span></label>
+					<label><input type="checkbox" /><span>全球购</span></label>
+					<label><input type="checkbox" /><span>促销</span></label>
+					<label><input type="checkbox" /><span>支持门店自提</span></label>
+				</div>
+				<div class="sequence_pages">
+					<span>1</span>/<span>4</span>
+					<a href="#" class="pageUp"><img src="img_list/slicon.png" /></a>
+					<a href="#" class="nextPage"><img src="img_list/swicon.png" alt="" /></a>
+				</div>
+			</div>
+		</div> <!-- sequence  end  -->
+		<!-- 商品列表 -->
+		<div class="goods clearfix"></div>
+		<div class="pages clearfix">
+			<li class="btnL">上一页</li>
+			<ul>
+				<li class='page num'>1</li>
+				<li class='num'>2</li>
+				<li class='num'>3</li>
+				<li class='num'>4</li>
+			</ul>			
+			<li class="btnR">下一页</li>
+		</div>
+	</div> 
+	<!-- 尾巴 -->
+	<div id="footer"></div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>登录界面</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/com.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bl_login.css"/>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/com.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/bl_login.js"></script>
+</head>
+<body>
+<!-- 注册页面头部 -->
+	<div id="header">
+		<div class="head_logo">
+			<div class="f1">
+				<a href="#"><img src="img_zc/logon-logo.png" /></a>
+			</div>
+			<div class="f2">
+				<img src="img_zc/logon-logofont.png" />
+			</div>
+		</div>
+	</div>    <!-- 注册页面头部end -->
+<!-- 登录 -->
+	<div id="main_wapper">
+		<div class="main_inner">
+			<div class="main_top clearfix">
+				<h3 class="title">
+					会员登录
+				</h3>
+				<div class="register">
+					<a href="bl_zc.html">注册新账号</a>
+				</div>
+			</div>
+		
+			<div class="login">
+				<div class="userTest">
+					<span></span>
+				</div>
+				<div class="user">
+					<input type="text" id="userID" placeholder="用户名/手机号/邮箱"/>
+				</div>
+				<div class="password">
+					<input type="text" id="password" placeholder="密码"/>
+				</div>
+				<div class="verify clearfix">
+					<input type="text" placeholder="验证码"/>
+					<span>2456</span>
+				</div>
+				<div class="forget clearfix">
+					<a href="#">忘记密码?</a>
+				</div>
+				<div class="login_btn">
+					<input type="button" value="登 录" />
+				</div>
+				<div class="login_first">
+					<a href="#">百联通会员卡首次登录</a>
+				</div>
+				<div class="login_other">
+					<p><span>其他账号联合登录</span></p>
+				</div>
+				<div class="login_logo clearfix">
+					<a href="javascript:;" class="other1"></a>
+					<a href="javascript:;" class="other2"></a>
+					<a href="javascript:;" class="other3"></a>
+					<a href="javascript:;" class="other4"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,270 @@
+body,html{
+	width: 100%;
+	height: 100%;
+}
+/****工具栏*****/
+#tool_wapper{
+	width: 100%;
+	background: #f7f7f7;
+	border-top: 1px solid #FFF;
+    border-bottom: 1px solid #e9e9e9;
+}
+#tool_wapper .tool_inner{
+    height: 30px;
+    width: 1190px;
+    position: relative;
+    z-index: 100;
+    margin:0 auto;
+    font-size: 12px;
+}
+/*工具栏左侧*/
+#tool_wapper .tool_inner .left{
+	width: 82px;
+	height:30px;
+	position: relative;
+	float: left;
+}
+#tool_wapper .tool_inner .left:hover{
+	background: #fff;
+}
+#tool_wapper .tool_inner .left .a0{
+	display: block;
+	padding:0 10px;
+	height:30px;
+	position: relative;
+}
+#tool_wapper .tool_inner .left .a0:hover{
+	color:#e6133c;
+}
+#tool_wapper .tool_inner .left .a0 span{
+	float: left;
+}
+#tool_wapper .tool_inner .left .a0 b{
+	display: block;
+	float: left;
+	width: 7px;
+	height:4px;
+	margin-left:7px;
+	margin-top: 13px;
+	background: url(../img_com/tools1200_sprite.png) no-repeat 0 -40px;
+}
+#tool_wapper .tool_inner .left .tool_show{
+	width:222px;
+	padding:7px 12px;
+	background: #fff;
+	border:2px solid #fff;
+	position: absolute;
+	top:30px;
+	display: none;
+	
+}
+#tool_wapper .tool_inner .left .tool_show dl dd{
+	float: left;
+	width:100px;
+	height:24px;
+	padding:0 5px;
+}
+#tool_wapper .tool_inner .left .tool_show dl dd a{
+	display: block;
+	height: 24px;
+	color: #666;
+	padding: 0 10px;
+	line-height: 24px;
+}
+#tool_wapper .tool_inner .left .tool_show dl dd a:hover{
+	background: #eee;
+}
+/*工具栏右侧*/
+#tool_wapper .tool_inner .right{
+	width:572px;
+	float: right;
+}
+#tool_wapper .tool_inner .right ul li{
+	float: left;
+}
+#tool_wapper .tool_inner .right .login_register{
+	width:120px;
+	height:30px;
+	line-height: 30px;
+}
+#tool_wapper .tool_inner .right .login_register .login,
+#tool_wapper .tool_inner .right .login_register .register{
+	width:60px;
+	overflow: hidden;
+	display: block;
+	float: left;
+	text-align: center;
+}
+#tool_wapper .tool_inner .right .login_register .login:hover,.tool_inner .right .login_register .register:hover{
+	color:#e6133c;
+}
+#tool_wapper .tool_inner .right .login_register .login b{
+	display: block;
+	float: left;
+	width: 13px;
+	height:13px;
+	margin-top: 8px;
+	background: url(../img_com/tools1200_sprite.png) no-repeat 0 -15px;
+}
+#tool_wapper .tool_inner .right .login_register .login span{
+	display: block;
+	float: left;
+}
+#tool_wapper .tool_inner .right .right_com{
+	height: 30px;
+	line-height:30px;
+	position: relative;
+}
+#tool_wapper .tool_inner .right .tool_com{
+	display: block;
+	padding:0 10px; 
+	height: 30px;
+}
+#tool_wapper .tool_inner .right .tool_com:hover{
+	color:#e6133c;
+}
+#tool_wapper .tool_inner .right .tool_com span{
+	float: left;
+}
+#tool_wapper .tool_inner .right .tool_com b{
+	display: block;
+	float: left;
+	width: 7px;
+	height:4px;
+	margin-left:7px;
+	margin-top: 13px;
+	background: url(../img_com/tools1200_sprite.png) no-repeat 0 -40px;
+}
+#tool_wapper .tool_inner .right .right_com .tool_show{
+	position: absolute;
+	background:#fff;
+    border: 1px solid #e2e2e2;
+}
+#tool_wapper .tool_inner .right .right_com .tool_show dl dd a{
+	display: block;
+	height: 24px;
+	color: #666;
+	padding:0 10px;
+	line-height: 24px;
+}
+#tool_wapper .tool_inner .right .right_com .tool_show dl dd a:hover{
+	background: #eee;
+}
+#tool_wapper .tool_inner .right .right_com .recharge{
+	position: absolute;
+	background:#fff;
+    border: 1px solid #e2e2e2;
+    width:450px;
+    left:-195px;
+    padding:10px;
+}
+#tool_wapper .tool_inner .right .right_com .recharge dl{
+	float: left;
+	width: 100px;
+	height:126px;
+	border-right:1px dashed #e9e9e9;
+	padding:0 5px;
+	line-height: 24px;
+}
+#tool_wapper .tool_inner .right .right_com .recharge dl dt{
+	padding-left:10px;
+	font-weight: 800; 
+}
+#tool_wapper .tool_inner .right .right_com .recharge dl dd a{
+	display: block;
+	padding-left: 10px;
+}
+#tool_wapper .tool_inner .right .right_com .recharge dl dd a:hover{
+	background: #eee;
+}
+#tool_wapper .tool_inner .right .right_com .bailianApp{
+	position: absolute;
+	left: -26px;
+}
+#tool_wapper .tool_inner .right .right_com .bailianApp a{
+	display: block;
+	width: 140px;
+	height:150px;
+}
+#tool_wapper .tool_inner .right .right_com .bailianApp a img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+/********尾部**********/
+/*footer上部分*/
+.foot_wapper{
+	width:100%;
+	background: #f3f3f3;
+
+}
+.foot_wapper .foot_inner{
+	width: 1120px;
+	margin:0 auto;
+	padding:24px 0 60px;
+}
+.foot_wapper .foot_inner dl{
+	width:200px;
+	margin:0 10px;
+	float: left;
+}
+.foot_wapper .foot_inner dl dt{
+	height:40px;
+}
+ .foot_wapper .foot_inner dl dt img{
+	vertical-align: middle;
+	margin-right: 15px;
+}
+ .foot_wapper .foot_inner dl dd a{
+	display: block;
+	width: 200px;
+	padding-left: 55px;
+	color:#555;
+	line-height: 26px;
+	font-size: 12px;
+}
+ .foot_wapper .foot_inner dl dd a:hover{
+	text-decoration: underline;
+	color:#e6133c;
+}
+/*footer下部分*/
+ .foot_bottom_wapper{
+	width: 100%;
+	background: #fff;
+}
+ .foot_bottom_wapper .foot_bottom_inner{
+	width: 1190px;
+	margin:0 auto;
+	padding-top: 15px;
+}
+.foot_bottom_wapper .foot_bottom_inner p{
+	text-align: center;
+	font-size: 12px;
+	color: #ccc;
+}
+ .foot_bottom_wapper .foot_bottom_inner p a{
+	padding:0 10px;
+	color: #000;
+}
+.foot_bottom_wapper .foot_bottom_inner p a:hover{
+	color: #e6133c;
+}
+ .foot_bottom_wapper .foot_bottom_inner .p1 a{
+	color: #ccc;
+}
+.foot_bottom_wapper .foot_bottom_inner .p1 a:hover{
+	color: #666;
+}
+ .foot_bottom_wapper .foot_bottom_inner .p2 img{
+	width: 20px;
+	height:20px;
+	vertical-align: middle;
+	margin:0 10px;
+ .foot_bottom_wapper .foot_bottom_inner .p2 a{
+	display: inline-block;
+	vertical-align: middle;
+	color: #ccc;
+}
+ .foot_bottom_wapper .foot_bottom_inner .p2 a:hover{
+	color: #ccc;
+}

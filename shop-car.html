@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/com.css" />
+	<link rel="stylesheet" href="css/shopCar.css" />
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/shopCar.js"></script>
+</head>
+<body>
+<!-- 工具栏 -->
+	<div id="tools"></div>
+<!-- 头部 -->
+	<div id="header">
+		<div class="head clearfix">
+			<div class="headL clearfix">
+				<h1>
+					<a href="javascript:;">
+						<img src="img_zc/logon-logo.png" />
+					</a>
+				</h1>
+				<strong>购物车</strong>
+			</div>
+			<div class="headR">
+				现在<a href="bl_login.html">登录</a>，您购物车中的商品将会被永久保存
+			</div>
+		</div>
+	</div>
+<!-- 主体 -->
+	<div id="main">
+		<div class="title">
+			<p>大型活动及促销活动期间，由于订单量激增，因此发货时效可能会比平时稍有延长，敬请谅解。</p>
+		</div>
+
+
+		<div class="car-title clearfix">
+			<div class="name">
+				全部商品
+			</div>
+			<div class="pay-message">
+				<span>优惠</span>
+				<i>-￥0.00</i>
+				 商品金额（不含运费）：
+				 <span class="money"><em>￥</em><b>0</b></span>
+				 <a href="javascript:;" class="buyNow">去结算</a>
+			</div>
+		</div>
+		
+		<div class="car-head clearfix">
+			<label class="select-all qx">
+				<div class="chk chkClick"></div>
+				<span class="">全选</span>
+			</label>
+			<div class="item">商品信息</div>
+			<div class="item-price">单价（元）</div>
+			<div class="number">件数</div>
+			<div class="total-price">金额（元）</div>
+			<div class="action">操作</div>	
+		</div>
+		<ul class="cart-table-list">
+	<!-- 		<li>
+				<div class="cart-table-line clearfix">
+					<div class="box1">
+						<div class="chk"></div>
+					</div>
+					<div class="box2">
+						<a href="javascript:;" class="goods-img">
+							<img src="" alt="">
+						</a>
+						<a href="javascript:;" class="goods-name">
+							苹果（Apple）MacBook Air MMGG2CH/A...
+						</a>
+					</div>
+					<div class="box3">
+						￥2222
+					</div>
+					<div class="box4">
+						<em class="cut">-</em>
+						<input type="text" class="num" value="1"/>
+						<em class="add">+</em>
+					</div>
+					<div class="box5">
+						
+					</div>
+					<div class="box6">
+						<p class="favorite">移入收藏夹</p>
+						<p class="del">删除</p>
+					</div>
+				</div>
+			</li> -->
+		</ul>
+		<div class="pay-line clearfix">
+			<div class="select-all sel clearfix">
+				<div class="chk chkClick"></div>
+				<div class="txt">全选</div>
+			</div>
+			<a href="javascript:;" class="a1"><i></i>删除</a>
+			<a href="javascript:;" class="a2">清除失效商品</a>
+			<a href="javascript:;" class="a3">移入收藏夹</a>
+			<a href="javascript:;" class="a4">已选择<span>3</span>件商品</a>
+			<div class="div money"><em>￥</em><b>0</b></div>
+			<a href="javascript:;" class="buyNow a5">去结算</a>
+		</div>	
+	</div>
+<!-- 尾部 -->
+	<div id="footer"></div>
+</body>
+</html>

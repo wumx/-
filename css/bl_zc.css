@@ -1,0 +1,186 @@
+/****网页主体配色****/
+body,html{
+	width: 100%;
+	height:100%;
+	background: #F9F9F8;
+}
+
+
+/*****网页头部*******/
+#header{
+	width:100%;
+}
+#header .head_logo{
+	width:950px;
+	height:80px;
+	margin:30px auto 0;
+}
+#header .head_logo .f1,#header .head_logo .f1{
+	float: left;
+}
+
+/*****注册网站主体******/
+/*注册头部*/
+#main{
+	width:950px;
+	background: #fff;
+	margin:0 auto;
+	padding-bottom: 75px;
+}
+#main .main_top{
+	width:910px;
+	height:30px;
+	padding:10px 20px;
+	border:1px solid #e1dfda;;
+}
+#main .main_top .title{
+	font-size: 16px;
+	line-height: 30px;
+	float: left;
+	color: #ff002a;
+}
+#main .main_top .login{
+	float: right;
+	color: #63625d;
+}
+#main .main_top .login a{
+	color: #0088cc;
+}
+/*注册*/
+#main .main_bottom{
+	margin-left:190px;
+	padding-top:50px;
+}
+#main .main_bottom .login_warp{	
+}
+#main .main_bottom .login_warp .login_data{
+	height:36px;
+	padding:10px 0;
+}
+#main .main_bottom .login_warp .login_data .lt{
+	width:136px;
+	height:32px;
+	line-height: 32px;
+	float: left;
+	text-align: right;
+}
+#main .main_bottom .login_warp .login_data .lt b{
+	color: #df3d36;
+}
+#main .main_bottom .login_warp .login_data .gt input{
+	width:258px;
+	height:32px;
+	color:#000;
+	font-size: 12px;
+	padding:0 10px 0 30px;
+	background: #fff;
+	border:1px solid #ccc;
+	border-radius: 3px;
+}
+#main .main_bottom .login_warp .login_data ul{
+	float:right;
+	width:315px;
+	position: relative;
+}
+#main .main_bottom .login_warp .login_data ul li{
+	padding-left:35px;
+	width:280px;
+	position: absolute;
+	display: none;
+}
+#main .main_bottom .login_warp .login_data ul .danger{
+	background:url(../img_zc/v-icon-1.png) no-repeat 9px center;
+}
+#main .main_bottom .login_warp .login_data ul .error{
+	background:url(../img_zc/v-icon-2.png) no-repeat 9px center;
+}
+#main .main_bottom .login_warp .login_data ul .sure{
+	background:url(../img_zc/v-icon-3.png) no-repeat 9px center;
+}
+#main .main_bottom .login_warp .login_data ul .show{
+	display: block;
+}
+#main .main_bottom .login_warp .login_data .gt input:hover{
+	-webkit-box-shadow:0px 0px 3px #ccc;
+}
+#main .main_bottom .login_warp .login_data .gt .index1{
+	background: url(../img_zc/register.png) no-repeat 10px 9px;
+}
+#main .main_bottom .login_warp .login_data .gt .index2{
+	background: url(../img_zc/register.png) no-repeat 10px -52px;
+}
+#main .main_bottom .login_warp .login_data .gt .index4{
+	background: url(../img_zc/register.png) no-repeat 10px -52px;
+	width:140px;
+	height:32px;
+	padding:0 12px 0 35px;
+	border:1px solid #999;
+	float: left;
+}
+#main .main_bottom .login_warp .login_data .gt .index3{
+	background: url(../img_zc/register.png) no-repeat 10px -287px;
+}
+#main .main_bottom .login_warp .login_data .gt .yzm{
+	float: left;
+	width:100px;
+	height:34px;
+	text-align: center;
+	line-height: 36px;
+	background:#ccc;
+	margin-left:10px;
+	font-size: 20px;
+	color:#fff;
+	font-weight:800;
+	cursor: pointer;
+}
+.login-remember{
+	padding-left: 140px;
+	padding-top:5px;
+	height:25px;
+	line-height: 18px;
+	overflow: hidden;
+	color: #666666;
+}
+.login-remember label{
+	float:left;
+	cursor: pointer;
+	padding-right: 10px;
+}
+.login-remember label .i0{
+	width:13px;
+	height:13px;
+	display:inline-block;
+	margin-top:2px;
+	border:1px solid #55779b;
+}
+.login-remember label .i1{
+	width:13px;
+	height:13px;
+	overflow: hidden;
+	display:inline-block;
+	margin-top:2px;
+	border:1px solid #55779b;
+	background:url(../img_zc/register.png) no-repeat 0 -473px;
+}
+.login-remember a{
+	color:#0088ca;
+}
+.login-remember a:hover{
+	text-decoration: underline;
+}
+.register_btn{
+	width:300px;
+	height:36px;
+	background:#E6133C;
+	margin-left: 140px;
+	overflow: hidden;
+	border-radius: 3px;
+}
+.register_btn input{
+	width:100%;
+	height: 100%;
+	border: 0;
+	background: none;
+	color:#fff;
+	font-size: 16px;
+}

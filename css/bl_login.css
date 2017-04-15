@@ -1,0 +1,192 @@
+/*****网页头部*******/
+#header{
+	width:100%;
+}
+#header .head_logo{
+	width:950px;
+	height:80px;
+	margin:30px auto 0;
+}
+#header .head_logo .f1,#header .head_logo .f1{
+	float: left;
+}
+/******登录******/
+	/*登录头部*/
+#main_wapper{
+	padding:30px 0 25px 0;
+	background: url(../img_zc/login-body.jpg) no-repeat center bottom;
+}
+#main_wapper .main_inner{
+	width: 300px;
+	padding:0 94px;
+	margin: 0 auto;
+	border:6px solid #e2e2e2;
+	background: #fff;
+}
+.main_top{
+	margin-top: 60px;
+}
+.main_top .title{
+	font-size: 18px;
+	float: left;
+	color: #000;
+	font-weight: 100;
+}
+.main_top .register a{
+	display: block;
+	float:right;
+	font-size:12px;
+	color:#0088cc;
+}
+.main_top .register a:hover{
+	text-decoration: underline;
+}
+	/*登录主体*/
+.login .userTest{
+	width:300px;
+	min-height: 10px;
+}
+.error{
+	height:auto;
+	border:1px solid #EE5544;
+	background:#FFFDF0;
+	margin-top:10px;
+}
+.error span{
+	display: block;
+	padding-left: 30px;
+	background: url(../img_zc/v-icon-2.png) no-repeat 9px center;
+	color:#EE5544;
+}
+.login .user,.login .password{
+	margin-top:20px;
+	width:250px;
+	height:34px;
+	border:1px solid #999;
+	padding:0 12px 0 35px;
+	background: url(../img_zc/userpic.png) no-repeat 9px center ;
+}
+.login .user:hover,.login .password:hover{
+	-webkit-box-shadow:0px 0px 3px #ccc;
+}
+.login .user input,.login .password input{
+	width:100%;
+	height:100%;
+	border:0;
+	background: none;
+}
+.login .password{
+	background: url(../img_zc/passwordpic.png) no-repeat 9px center ;
+}
+/*验证码*/
+.login .verify{
+	margin-top:20px;
+}
+.login .verify input{
+	width:140px;
+	height:32px;
+	padding:0 12px 0 35px;
+	border:1px solid #999;
+	float: left;
+	background: url(../img_zc/passwordpic.png) no-repeat 9px center ;
+}
+.login .verify input:hover{
+	-webkit-box-shadow:0px 0px 3px #ccc;
+}
+.login .verify span{
+	float: left;
+	width:100px;
+	height:34px;
+	text-align: center;
+	line-height: 36px;
+	background:#ccc;
+	margin-left:10px;
+	font-size: 20px;
+	color:#fff;
+	font-weight:800;
+	cursor: pointer;
+}
+/*忘记密码*/
+.login .forget{
+	height:40px;
+	margin-top:20px;
+}
+.login .forget a{
+	float:right;
+	font-size: 12px;
+}
+.login .forget a:hover{
+	color:#08c;
+	text-decoration: underline;
+}
+/*登录按钮*/
+.login .login_btn{
+	height:36px;
+	background: #E6133C;
+}
+.login .login_btn input{
+	border:0;
+	background:none;
+	width:100%;
+	height:100%;
+	color:#fff;
+	font-size:18px;
+}
+/*使用会员卡首次登录*/
+.login .login_first{
+	height:52px;
+	line-height:52px;
+}
+.login .login_first a{
+	display:block;
+	float:right;
+	padding-left:23px;
+	background: url(../img_zc/right-icon.png) no-repeat left center;	
+}
+.login .login_first a:hover{
+	color:#08c;
+	text-decoration: underline;
+}
+/*其他账号联合登录*/
+.login .login_other{
+	height:49px;
+}
+.login .login_other p{
+	display: block;
+	height: 24px;
+	border-bottom:1px solid #ddd;
+	text-align: center;
+	line-height: 49px;
+}
+.login .login_other span{
+	background: #fff;
+	line-height: 49px;
+	color:#999;
+	padding:0 15px;
+	font-size:12px;
+}
+/*其他登录方式logo*/
+.login .login_logo{
+	margin-left:-10px;
+	margin-top:10px;
+	margin-bottom:45px;
+}
+.login .login_logo a{
+	display:block;
+	float:left;
+	width:66px;
+	height:22px;
+	margin:0 5px;
+}
+.login .login_logo .other1{
+	background:url(../img_zc/login-cion-1.png) no-repeat center bottom;
+}
+.login .login_logo .other2{
+	background:url(../img_zc/login-cion-2.png) no-repeat center bottom;
+}
+.login .login_logo .other3{
+	background:url(../img_zc/login-cion-3.png) no-repeat center bottom;
+}
+.login .login_logo .other4{
+	background:url(../img_zc/login-cion-4.png) no-repeat center bottom;
+}
