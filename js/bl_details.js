@@ -2,7 +2,6 @@ $(function(){
 //ajax加载头尾
 	//加载工具栏
 	$('#tools').load("com.html #tool_wapper",function(){
-		
 		//划入效果
 		$('.tool_hide').mouseenter(function(){
 			$(this).find('.tool_show').css('display',"block");
@@ -12,13 +11,13 @@ $(function(){
 		$('#tool_wapper').find('.tool_hide').mouseleave(function(){
 			$(this).find('.tool_show').css('display',"none");
 			$(this).css('background',"#f7f7f7");
-		});	
+		});
 	});
 	//购物车
 	$('#shop-car').load('right-sideBar.html',function(){
 		//购物车的显示与隐藏
 		$('.car').click(function(){
-			
+
 			$('.right-sidebar').toggleClass('r0');
 			sc_msg();
 		});
@@ -34,7 +33,7 @@ $(function(){
 
 			$(this).css('background','#fff');
 			$(this).find('.icon').toggleClass('hide');
-			
+
 		});
 
 		sc_msg();
@@ -55,7 +54,7 @@ $(function(){
 				var arr = eval(str);
 				//遍历所有对象。如果id相同，让该商品数量递增 ;
 				for(var attr in arr){
-					if(arr[attr].id == id){		
+					if(arr[attr].id == id){
 						arr[attr].num = arr[attr].num + num;  //让json结构中num自增。
 						var cookieStr = JSON.stringify(arr);//将json对象转换成字符串.
 						$.cookie('goods',cookieStr);
@@ -78,7 +77,7 @@ $(function(){
 			var sc_str = $.cookie('goods');
 			if(sc_str){//如果购物车cookie不为空。
 				var sc_obj = eval(sc_str);
-				var sc_num = 0 ; 
+				var sc_num = 0 ;
 				for(var i in sc_obj){
 					sc_num = Number(sc_obj[i].num) + sc_num;
 				}
@@ -95,9 +94,9 @@ $(function(){
 					if(sc_str){
 						var sc_obj = eval(sc_str);
 						var sc_num = 0 ;
-						var html = ''; 
+						var html = '';
 						for(var i in sc_obj){
-						if(sc_obj[i].num != 0){				
+						if(sc_obj[i].num != 0){
 							html += '<li id="'+res[sc_obj[i].id].id+'">';
 							html += '<div class="car-img">';
 							html += '<img src="'+res[sc_obj[i].id].img1+'" alt="">';
@@ -149,7 +148,7 @@ $(function(){
 						$('p[name='+str+']').find('.s1').html(num);
 
 						carNum(str,num,price);
-		
+
 					});
 
 					//商品的增加
@@ -171,7 +170,7 @@ $(function(){
 						var arr = eval(str);
 						//遍历所有对象。如果id相同，让该商品数量递增 ;
 						for(var attr in arr){
-							if(arr[attr].id == name){		
+							if(arr[attr].id == name){
 								arr[attr].num = num;
 								var cookieStr = JSON.stringify(arr);//将json对象转换成字符串.
 								$.cookie('goods',cookieStr);
@@ -190,7 +189,6 @@ $(function(){
 						for(var i = 0 ; i < $('.s2').length ; i++ ){
 							money += parseInt($('.s2').eq(i).html());
 						}
-						console.log(money)
 						$('.general-money').html(money);
 					}
 					carsMoney();
@@ -205,27 +203,27 @@ $(function(){
 						var arr = eval(str);
 						//遍历所有对象。如果id相同，移出商品信息 ;
 						for(var attr in arr){
-							if(arr[attr].id == id){		
+							if(arr[attr].id == id){
 								arr[attr].num = 0;
 								var cookieStr = JSON.stringify(arr);//将json对象转换成字符串.
 								$.cookie('goods',cookieStr);
 							}
-						}	
+						}
 						$('div[name='+id+']').find('b').html(0);
 						sc_car();
 						carsMoney();
 					})
-					
+
 				}
 
 			});
 		}
 	});
 	//加载尾部
-	$('#footer').load("com.html .foot_wapper");	
+	$('#footer').load("com.html .foot_wapper");
 
 	//ajax 加载导航栏
-	$('#header').load("bl-head.html",function(){ 
+	$('#header').load("bl-head.html",function(){
 		//侧边栏的划出
 		$('.sideBar_list').find('li').mouseenter(function(){
 			var listIndex = $(this).index();
@@ -264,7 +262,7 @@ $(function(){
 					$('.left-ul-show').css('display','none');
 				})
 			}
-		});	
+		});
 
 		$('.nav_left').mouseenter(function(){
 			$('.sideBar_list').css('display','block');
@@ -290,34 +288,34 @@ $(function(){
 		success:function(res){
 			//console.log(res);
 			var str = window.location.href;
-	
+
 	    	var html = '';
 	    	str = str.split('=')[1];
 	    	$('.addCart').attr('id',str);
 			for(var i=0 ; i < res.length ; i++ ){
 
 				if(res[i].id == str){
-			
+
 					html += '<div class="spec-preview">';
 					html += '<div class="mark-box"></div>';
 					html += '<img class="img" src="'+res[i].img1+'"/>';
-					html += '<div class="position-box"></div>';						
-					html += '</div>';		
-					html += '<div class="b-box">';		
-					html += '<div class="b-box-all">';		
-					html += '<img class="img" src="'+res[i].img1+'" />';	
-					html += '</div>';	
-					html +=	'</div>';	
-					html += '<div class="items">';			
+					html += '<div class="position-box"></div>';
+					html += '</div>';
+					html += '<div class="b-box">';
+					html += '<div class="b-box-all">';
+					html += '<img class="img" src="'+res[i].img1+'" />';
+					html += '</div>';
+					html +=	'</div>';
+					html += '<div class="items">';
 					html += '<ul class="clearfix imgs">';
-					html += '<li><img class="img1" src="'+res[i].img1+'" /></li>';	
-					html += '<li><img class="img1" src="'+res[i].img2+'" /></li>';		
-					html += '<li><img class="img1" src="'+res[i].img3+'" /></li>';		
+					html += '<li><img class="img1" src="'+res[i].img1+'" /></li>';
+					html += '<li><img class="img1" src="'+res[i].img2+'" /></li>';
+					html += '<li><img class="img1" src="'+res[i].img3+'" /></li>';
 					html += '<li><img class="img1" src="'+res[i].img4+'" /></li>';
 					html += '<li><img class="img1" src="'+res[i].img5+'" /></li>';
 					html += '</ul>';
-					html += '</div>';	
-						
+					html += '</div>';
+
 				}
 
 			}
@@ -347,11 +345,11 @@ $(function(){
 				top = top > 0 ? top : 0;
 				left = left > borderX ? borderX : left;
 				top = top > borderY ? borderY : top;
-				
+
 				//计算两者比例
 				var proX = left/ borderX;
 				var proY = top / borderY;
-				
+
 				//赋值
 				left = left + "px";
 				top = top + "px";
@@ -368,7 +366,7 @@ $(function(){
 			});
 			//划入划出显示不同的图片
 			$('.imgs').on('mouseenter','li',function(){
-				
+
 				var str = $(this).children().attr('src');
 
 				$('.img').attr('src',str);
@@ -376,7 +374,7 @@ $(function(){
 			});
 		}
 	})
-	
+
 	//分享按钮
 	$('.share').eq(0).mouseenter(function(){
 		$(this).addClass('share0');
@@ -416,7 +414,7 @@ $(function(){
                     callback: function(index){
                         var html='<ul>';
                             for(var i=index*5 ; i<(index+1)*5; i++){
-                                if(i<res.length){	
+                                if(i<res.length){
                                   html += '<li class="clearfix">';
                                   html += '<div class="user-info">';
                                   html += '<div class="user-img">';
@@ -433,20 +431,20 @@ $(function(){
 								  		}else{
 								  			html += '<i></i>';
 								  		}
-								  		
 								  }
 									html += '</div>';
 									html += '<p class="review-txt">'+res[i].text+'</p>';
 									html += '<div class="reviewed-info-time">';
 									html += '<span>'+res[i].date+'</span>';
-									html += '<a href="#">'+res[i].num+'</a>';
+									html += '<a href="javascript:;">'+res[i].num+'</a>';
 									html += '</div></div></li>';
                             }
                         }
                         html+='</ul>';
                         $('.showComm').html(html);
+                        $('#pagination').find("a").attr("href" , "#comment");
                     }
-                   
+
                 });
 
             }

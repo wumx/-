@@ -209,7 +209,7 @@
 	height: 31px;
 	overflow: hidden;
 	color: #000;
-    -webkit-transition: all .2s ease-in 0s;
+  -webkit-transition: all .2s ease-in 0s;
 }
 .nav_wapper .nav_inner .nav_list li a:hover{
 	border-bottom:3px solid #E6133C;

@@ -1,6 +1,4 @@
 $(function(){
-
-	
 //侧边栏心加载
 	$.ajax({
 		url:'json/bl.json',
@@ -11,5 +9,5 @@ $(function(){
 				$('.left-ul-show').css('display','none');
 			})
 		}
-	});	
+	});
 });

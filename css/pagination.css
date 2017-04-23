@@ -1,26 +1,21 @@
-@charset "utf-8";      
-.pagination a {
-    text-decoration: none;
-	border: 1px solid #AAE;
-	color: #15B;
-}
+@charset "utf-8";
 
-.pagination a, .pagination span {
-    display: inline-block;
-    padding: 0.1em 0.4em;
-    margin-right: 5px;
-	margin-bottom: 5px;
+#pagination a, #pagination span {
+  cursor: pointer;
+  float: left;
+  list-style: none;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  margin-right: 10px;
+  border: 1px solid #999;
+  background: #eee;
+  color: #333;
+  display: inline-block;
+  padding: 0 8px;
 }
-
-.pagination .current {
-    background: #26B;
-    color: #fff;
-	border: 1px solid #AAE;
+#pagination .current {
+  background: #e6133c;
+  color: #fff;
+  border: 1px solid #e6133c;
 }
-
-.pagination .current.prev, .pagination .current.next{
-	color:#999;
-	border-color:#999;
-	background:#fff;
-}
-

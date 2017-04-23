@@ -1,7 +1,7 @@
 $(function(){
 /*********加载工具栏***********/
 	$('#tools').load("com.html #tool_wapper",function(){
-		
+
 		//划入效果
 		$('.tool_hide').mouseenter(function(){
 			$(this).find('.tool_show').css('display',"block");
@@ -11,12 +11,12 @@ $(function(){
 		$('#tool_wapper').find('.tool_hide').mouseleave(function(){
 			$(this).find('.tool_show').css('display',"none");
 			$(this).css('background',"#f7f7f7");
-		});	
+		});
 	});
-	
+
 	//加载尾部
-	$('#footer').load("com.html .foot_wapper");	
-	
+	$('#footer').load("com.html .foot_wapper");
+
 /***********注册验证*************/
 	$('.login_warp').on('focus','.gt',function(){
 		$(this).find('li').eq(0).addClass('show').siblings().removeClass('show');
@@ -25,8 +25,8 @@ $(function(){
 	//用户名验证
 	$('#userID').blur(function(){
 		var str = $('#userID').val();
-		var s = str.search(/^[a-zA-Z_]\w{5,19}$/);   
-		liShow(s,0);	
+		var s = str.search(/^[a-zA-Z_]\w{5,19}$/);
+		liShow(s,0);
 	});
 	//密码验证
 	$('#password1').blur(function(){
@@ -90,28 +90,11 @@ $(function(){
 	$('input[type=button]').click(function(){
 		var ID = $('input[type=text]').eq(0).val();
 		var password = $('input[type=text]').eq(1).val();
-		console.log(iFlat);
-		console.log(btnTest)
 		if(btnTest >= 5 && iFlat){
-			$.ajax({
-				url:"http://datainfo.duapp.com/shopdata/userinfo.php",
-				type:"POST",
-				data:{
-					status:"register",
-					userID:ID,
-					password:password
-				},
-				success:function(res){
-					console.log(res)
-					switch(res){
-						case "0":$('.gt').eq(0).find('li').eq(1).text('用户名重名').addClass('show').siblings().removeClass('show');break;
-						case "1":window.location.href="bl_login.html";break;
-						case "2":alert('去找后端大哥，和我没关系，他的电话号是');break;
-	
-					}
-				}
-			})
+			$.cookie("userId",ID);
+			$.cookie("passId" , password);
+			window.location.href="./bl_login.html";
 		}
-	
+
 	});
 });

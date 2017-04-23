@@ -2,7 +2,7 @@ $(function(){
 //ajax加载头尾
 	//加载工具栏
 	$('#tools').load("com.html #tool_wapper",function(){
-		
+
 		//划入效果
 		$('.tool_hide').mouseenter(function(){
 			$(this).find('.tool_show').css('display',"block");
@@ -12,11 +12,11 @@ $(function(){
 		$('#tool_wapper').find('.tool_hide').mouseleave(function(){
 			$(this).find('.tool_show').css('display',"none");
 			$(this).css('background',"#f7f7f7");
-		});	
+		});
 	});
-	
+
 	//加载尾部
-	$('#footer').load("com.html .foot_wapper");	
+	$('#footer').load("com.html .foot_wapper");
 	//购物车
 
 
@@ -24,7 +24,7 @@ $(function(){
 	$('#shop-car').load('right-sideBar.html',function(){
 		//购物车的显示与隐藏
 		$('.car').click(function(){
-			
+
 			$('.right-sidebar').toggleClass('r0');
 			sc_msg();
 		});
@@ -40,7 +40,7 @@ $(function(){
 
 			$(this).css('background','#fff');
 			$(this).find('.icon').toggleClass('hide');
-			
+
 		});
 
 		sc_msg();
@@ -61,7 +61,7 @@ $(function(){
 				var arr = eval(str);
 				//遍历所有对象。如果id相同，让该商品数量递增 ;
 				for(var attr in arr){
-					if(arr[attr].id == id){		
+					if(arr[attr].id == id){
 						arr[attr].num = arr[attr].num + num;  //让json结构中num自增。
 						var cookieStr = JSON.stringify(arr);//将json对象转换成字符串.
 						$.cookie('goods',cookieStr);
@@ -84,7 +84,7 @@ $(function(){
 			var sc_str = $.cookie('goods');
 			if(sc_str){//如果购物车cookie不为空。
 				var sc_obj = eval(sc_str);
-				var sc_num = 0 ; 
+				var sc_num = 0 ;
 				for(var i in sc_obj){
 					sc_num = Number(sc_obj[i].num) + sc_num;
 				}
@@ -101,10 +101,10 @@ $(function(){
 					if(sc_str){
 						var sc_obj = eval(sc_str);
 						var sc_num = 0 ;
-						var html = ''; 
+						var html = '';
 						for(var i in sc_obj){
-						if(sc_obj[i].num != 0){	
-									
+						if(sc_obj[i].num != 0){
+
 						html += '<li id="'+res[sc_obj[i].id].id+'">';
 						html += '<div class="car-img">';
 						html += '<img src="'+res[sc_obj[i].id].img1+'" alt="">';
@@ -156,7 +156,7 @@ $(function(){
 						$('p[name='+str+']').find('.s1').html(num);
 
 						carNum(str,num,price);
-		
+
 					});
 
 					//商品的增加
@@ -165,7 +165,6 @@ $(function(){
 						var str = $(this).parent().attr('name');
 						var num = parseInt($('p[name='+str+']').find('.s1').html());
 						var price = parseInt($('p[name='+str+']').find('.je').html());
-						console.log(price)
 						num++;
 						$('p[name='+str+']').find('.s1').html(num);
 
@@ -178,7 +177,7 @@ $(function(){
 						var arr = eval(str);
 						//遍历所有对象。如果id相同，让该商品数量递增 ;
 						for(var attr in arr){
-							if(arr[attr].id == name){		
+							if(arr[attr].id == name){
 								arr[attr].num = num;
 								var cookieStr = JSON.stringify(arr);//将json对象转换成字符串.
 								$.cookie('goods',cookieStr);
@@ -197,7 +196,6 @@ $(function(){
 						for(var i = 0 ; i < $('.s2').length ; i++ ){
 							money += parseInt($('.s2').eq(i).html());
 						}
-						console.log(money)
 						$('.general-money').html(money);
 					}
 					carsMoney();
@@ -212,17 +210,17 @@ $(function(){
 						var arr = eval(str);
 						//遍历所有对象。如果id相同，移出商品信息 ;
 						for(var attr in arr){
-							if(arr[attr].id == id){		
+							if(arr[attr].id == id){
 								arr[attr].num = 0;
 								var cookieStr = JSON.stringify(arr);//将json对象转换成字符串.
 								$.cookie('goods',cookieStr);
 							}
-						}	
+						}
 						$('div[name='+id+']').find('b').html(0);
 						sc_car();
 						carsMoney();
 					})
-					
+
 				}
 
 			});
@@ -317,14 +315,14 @@ $(function(){
 			}
 			str += '</ul>';
 			$('.filter_right').eq(1).html(str);
-				
+
 			//品牌商标的移入移出效果
 			$('.filter_right').eq(1).children().on('mouseenter','li',function(){
 				$(this).addClass('brandShow')
 				$(this).children().eq(0).css('display','block')
 				.siblings().css('display','none');
 			});
-			
+
 			$('.filter_right').eq(1).children().on('mouseleave','li',function(){
 				$(this).removeClass('brandShow')
 				$(this).children().eq(0).css('display','none')
@@ -368,7 +366,7 @@ $(function(){
 				if(n == 0){
 					n = num -1;
 				}else{
-					n--;	
+					n--;
 				}
 				fn1(res)
 			}
@@ -382,8 +380,9 @@ $(function(){
 				$(this).addClass('page').siblings().removeClass('page');
 				n = $(this).index();
 				fn1(res);
+				$('body,html').animate({scrollTop:"0"});
 			})
-			
+
 		}
 	});
 	//加载商品信息函数函数

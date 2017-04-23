@@ -1,7 +1,7 @@
 $(function(){
 //加载工具栏
 	$('#tools').load("com.html #tool_wapper",function(){
-		
+
 		//划入效果
 		$('.tool_hide').mouseenter(function(){
 			$(this).find('.tool_show').css('display',"block");
@@ -13,9 +13,9 @@ $(function(){
 			$(this).css('background',"#f7f7f7");
 		});
 	});
-		
+
 //加载尾
-	$('#footer').load("com.html .foot_wapper");	
+	$('#footer').load("com.html .foot_wapper");
 
 //购物车加载
 	$.ajax({
@@ -61,21 +61,21 @@ $(function(){
 						html += '</div>';
 						html += '</div>';
 						html += '</li>';
-			
-						}	
-					} 
+
+						}
+					}
 
 				$('.cart-table-list').html(html); //插入
 
 
-			} //字符串拼接 end			
+			} //字符串拼接 end
 
 			//计算总数量函数
 			function sc_car(){
 				var sc_str = $.cookie('goods');
 				if(sc_str){//如果购物车cookie不为空。
 					var sc_obj = eval(sc_str);
-					var sc_num = 0 ; 
+					var sc_num = 0 ;
 					for(var i in sc_obj){
 						sc_num = Number(sc_obj[i].num) + sc_num;
 					}
@@ -95,7 +95,7 @@ $(function(){
 
 				//获取当前商品数量
 				var num = parseInt($('div[name='+str+']').children().eq(1).val());
- 
+
 				if(num <= 1){
 					num = 1;
 				}else{
@@ -132,7 +132,7 @@ $(function(){
 				var arr = eval(str);
 				//遍历所有对象。如果id相同，让该商品数量递增 ;
 				for(var attr in arr){
-					if(arr[attr].id == name){		
+					if(arr[attr].id == name){
 						arr[attr].num = num;
 						var cookieStr = JSON.stringify(arr);//将json对象转换成字符串.
 						$.cookie('goods',cookieStr);
@@ -157,15 +157,12 @@ $(function(){
 
 					var str = $('.box1').eq(i).children().eq(0).attr('class').split(' ')[2];
 
-
-					console.log(str);
-
 					if(str){
 
 						money += parseInt($('.box5').eq(i).html().split('￥')[1]);
 
 					}
-					
+
 				}
 				//console.log(money);
 
@@ -180,20 +177,19 @@ $(function(){
 			$('.del').click(function(){
 
 				var id = parseInt($(this).parent().parent().parent().attr('name'));
-				console.log(id);
 				$(this).parent().parent().parent().css('display',"none");
 
 				var str = $.cookie('goods');
 				var arr = eval(str);
 				//遍历所有对象。如果id相同，移出商品信息 ;
 				for(var attr in arr){
-					if(arr[attr].id == id){		
+					if(arr[attr].id == id){
 						arr[attr].num = 0;
 						var cookieStr = JSON.stringify(arr);//将json对象转换成字符串.
 						$.cookie('goods',cookieStr);
 					}
-				}	
-				$('div[name='+id+']').children().eq(1).val(0);				
+				}
+				$('div[name='+id+']').children().eq(1).val(0);
 				sc_car();
 				carsMoney();
 			}) //删除按钮 end
@@ -239,7 +235,7 @@ $(function(){
 					$('.select-all').eq(1).children().eq(0).removeClass('chkClick');
 
 				}
-			
+
 			}
 
 
@@ -262,7 +258,7 @@ $(function(){
 					selectAll();
 					falt = false;
 				}
-				
+
 				carsMoney();
 
 			});
@@ -270,8 +266,6 @@ $(function(){
 			//结算按钮
 
 			$('.buyNow').click(function(){
-
-				alert(1);
 			})
 
 		} // 购物车success  end

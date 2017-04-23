@@ -5,6 +5,7 @@
 	top:0;
 	right: -280px;
 	z-index: 999;
+	transition: right 0.3s ease-in-out;
 }
 .r0{
 	right:0;
@@ -19,7 +20,7 @@
 .right-sidebar-main ul{
 	position: absolute;
 	top:170px;
-} 
+}
 .right-sidebar-main ul li{
 	cursor: pointer;
 }
@@ -105,7 +106,7 @@
 .shop-car ul li{
 	height:50px;
 	padding:10px 0 10px 10px;
-	width:100%;	
+	width:100%;
 }
 .shop-car ul li .car-img{
 	border:1px solid #ddd;
@@ -201,7 +202,7 @@
 .shop-car .fot{
 	height:100px;
 	width: 280px;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	background: #eee
 }
@@ -211,7 +212,7 @@
     font-size: 12px;
     line-height: 36px;
     padding-left: 10px;
-    text-align: left 
+    text-align: left
 }
 .shop-car .fot .gengral span{
 	margin:0 5px;
@@ -225,5 +226,5 @@
 	text-align: center;
 	color: #fff;
 	line-height: 40px;
-	background:#D62233; 
+	background:#D62233;
 }

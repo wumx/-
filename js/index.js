@@ -13,17 +13,22 @@ $(function(){
 			$(this).css('background',"#f7f7f7");
 		});
 
-
-
 	//购物车
 	$('#shop-car').load('right-sideBar.html',function(){
 		//购物车的显示与隐藏
 		$('.car').click(function(){
-
 			$('.right-sidebar').toggleClass('r0');
 			sc_msg();
 		});
-
+		//购物车点击隐藏
+	  $("#side-shop-car").find(".title").children().eq(0).click(function(){
+	  	$('.right-sidebar').toggleClass('r0');
+			sc_msg();
+	  });
+	  //点击购物车进入购物车页面
+	  $("#side-shop-car").find(".title").children().eq(1).click(function(){
+	    window.location.href = "shop-car.html";
+	  });
 		//商品的划入划出
 		$('.many-car').on('mouseenter','li',function(){
 
@@ -160,7 +165,6 @@ $(function(){
 						var str = $(this).parent().attr('name');
 						var num = parseInt($('p[name='+str+']').find('.s1').html());
 						var price = parseInt($('p[name='+str+']').find('.je').html());
-						console.log(price)
 						num++;
 						$('p[name='+str+']').find('.s1').html(num);
 
@@ -192,7 +196,6 @@ $(function(){
 						for(var i = 0 ; i < $('.s2').length ; i++ ){
 							money += parseInt($('.s2').eq(i).html());
 						}
-						console.log(money)
 						$('.general-money').html(money);
 					}
 					carsMoney();
@@ -226,29 +229,27 @@ $(function(){
 
 
 	//登录注册
-	 function userName(){
-
-			var user = $.cookie('user');
-
-			console.log(user)
-
+	 function userName(callback){
+			var user = $.cookie('userStatus');
 			var html = '';
 			if(user){
-
  				html += '<a href="bl_login.html" class="login">';
- 				html += '<span>'+user+'</span></a>';
- 				html += '<a href="bl_zc.html" class="register">退出</a>';
-
+ 				html += '<span>'+$.cookie('userId')+'</span></a>';
+ 				html += '<a href="bl_zc.html" class="register" id="userOut">退出</a>';
 			}else{
-
 				html += '<a href="bl_login.html" class="login">';
 				html += '<b></b><span>请登录</span></a>';
 				html += '<a href="bl_zc.html" class="register">注册</a>';
 			}
 
-			$('.login_register').html(html)
+			$('.login_register').html(html);
+			callback();
 		}
-		userName();
+		userName(function(){
+			$("#userOut").click(function(){
+				$.cookie('userStatus' , "0");
+			})
+		});
 	});
 
 //加载尾部
