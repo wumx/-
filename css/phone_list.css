@@ -3,7 +3,7 @@
 	margin:0 auto;
 }
 #main .path{
-	
+
 }
 /*左边*/
 #main .path .path_left{
@@ -113,7 +113,7 @@
 	display:block;
 	font-style:normal;
 	display:none;
-		
+
 }
 /*更多选择*/
 .filter .filter-item .filter_right .rest{
@@ -172,6 +172,9 @@
 	background: #c01133;
 	color:#fff;
 	border:1px solid #c01133;
+}
+.sequence .sequence_left ul li .clickA:hover{
+	color:#fff;
 }
 .sequence .sequence_left ul li a:hover{
 	border:1px solid #c01133;
@@ -306,6 +309,9 @@
 	line-height:26px;
 	font-size: 18px;
 }
+.pro-show .pro-money b i{
+	font-style: normal;
+}
 /*商品信息*/
 .pro-show .product-comment{
 	height:48px;
@@ -313,12 +319,13 @@
 .pro-show .product-comment a,.pro-show .product-comment span{
 	display: block;
 	width:200px;
+	height: 48px;
+	line-height: 24px;
 	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;	
+	word-break:break-all;
 }
 .pro-show .product-comment a{
-	font-size: 13px;	
+	font-size: 13px;
 }
 .pro-show .product-comment a:hover{
 	text-decoration: underline;
@@ -375,7 +382,7 @@
 	margin:50px auto 50px;
 }
 .pages ul{
-	float:left;	
+	float:left;
 }
 .pages li{
 	cursor: pointer;

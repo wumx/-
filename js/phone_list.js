@@ -345,6 +345,7 @@ $(function(){
 		url:"json/phone_list.json",
 		type:"get",
 		success:function(res){
+			var PriceFalt = true;
 			num = Math.ceil(res.length/15);
 			fn1(res);
 			//下一页
@@ -381,8 +382,47 @@ $(function(){
 				n = $(this).index();
 				fn1(res);
 				$('body,html').animate({scrollTop:"0"});
+			});
+			//排序方式
+			$("#sort-mode").children().click(function(){
+				var mode = $(this).data("id");
+				var obj;
+				if(mode === "comprehensive"){ //综合
+					fn1(res);
+				}else if(mode === "volume"){
+					res.sort(function(a,b){
+						return parseInt(b.Sales_volume, 10) - parseInt(a.Sales_volume, 10);
+					});
+					fn1(res)
+					$(this).children().addClass("clickA")
+					$(this).siblings().children().removeClass("clickA");
+				}else if(mode === "Price"){  //销量
+					if(PriceFalt){
+						res.sort(function(a,b){
+							return parseInt(b.proMoney, 10) - parseInt(a.proMoney, 10);
+						});
+						PriceFalt = false;
+					}else{
+						res.sort(function(a,b){
+							return parseInt(a.proMoney, 10) - parseInt(b.proMoney, 10);
+						});
+						PriceFalt = true;
+					}
+					$(this).children().addClass("clickA")
+					$(this).siblings().children().removeClass("clickA");
+					fn1(res)
+				}else if(mode === "evaluate"){  //评价数
+					res.sort(function(a,b){
+						return parseInt(b.proAssess1, 10) - parseInt(a.proAssess1, 10);
+					});
+					$(this).children().addClass("clickA")
+					$(this).siblings().children().removeClass("clickA");
+					fn1(res)
+				}else if(mode === "newGoods"){
+					$(this).children().addClass("clickA")
+					$(this).siblings().children().removeClass("clickA");
+				}
 			})
-
 		}
 	});
 	//加载商品信息函数函数
@@ -402,9 +442,9 @@ $(function(){
 					}
 					str += '<div class="pro-icon"><img src="'+res[i].proIcon+'"/></div>';
 					str += '<div class="pro-img"><img src="'+res[i].proImg+'" /></div>';
-					str += '<div class="pro-money"><b>'+res[i].proMoney+'</b></div>';
-					str += '<div class="product-comment"><a href="javascript:;">'+res[i].proCom1+'</a>';
-					str += '<span>'+res[i].proCom2+'</span></div>';
+					str += '<div class="pro-money"><b><i>￥</i>'+res[i].proMoney+'</b></div>';
+					str += '<div class="product-comment"><a href="javascript:;">'+res[i].proCom+'</a>';
+					str += '</div>';
 					str += '<div class="pro-assess clearfix">';
 					str += '<div class="pro-assess-left">'+res[i].proAssess1+'</div>';
 					str += '<div class="pro-assess-right">'+res[i].proAssess2+'</div>';
