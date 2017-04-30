@@ -302,7 +302,14 @@ $(function(){
 			$(this).css('display','none');
 		})
 	});
-
+	/**************吸顶菜单*********************/
+	$(window).scroll(function(){
+    if($(window).scrollTop()>500){
+        $(".sequence").eq(0).addClass("xiding");
+      }else{
+      	$(".sequence").eq(0).removeClass("xiding");
+      }
+    });
 	// ajax 加载品牌商标
 	$.ajax({
 		url:'json/list-brand.json',
@@ -347,6 +354,9 @@ $(function(){
 		success:function(res){
 			var PriceFalt = true;
 			num = Math.ceil(res.length/15);
+			for(var i = 1 ; i <= num ; i++ ){
+				$("#yema").append("<li class='num'>"+i+"</li>");
+			}
 			fn1(res);
 			//下一页
 			function next(){
@@ -359,7 +369,7 @@ $(function(){
 			}
 			$('.nextPage').click(next);
 			$('.btnR').click(function(){
-				$(this).addClass('page').siblings().removeClass('page');
+				$('body,html').animate({scrollTop:"0"});
 				next();
 			});
 			//上一页
@@ -373,7 +383,8 @@ $(function(){
 			}
 			$('.pageUp').click(pageUp);
 			$('.btnL').click(function(){
-				$(this).addClass('page').siblings().removeClass('page');
+				//$(this).addClass('page').siblings().removeClass('page');
+				$('body,html').animate({scrollTop:"0"});
 				pageUp();
 			});
 			//数字点击切换
@@ -389,23 +400,27 @@ $(function(){
 				var obj;
 				if(mode === "comprehensive"){ //综合
 					fn1(res);
-				}else if(mode === "volume"){
+					$(this).children().addClass("clickA")
+					$(this).siblings().children().removeClass("clickA");
+				}else if(mode === "volume"){ //销量
 					res.sort(function(a,b){
 						return parseInt(b.Sales_volume, 10) - parseInt(a.Sales_volume, 10);
 					});
 					fn1(res)
 					$(this).children().addClass("clickA")
 					$(this).siblings().children().removeClass("clickA");
-				}else if(mode === "Price"){  //销量
+				}else if(mode === "Price"){  //价格
 					if(PriceFalt){
 						res.sort(function(a,b){
 							return parseInt(b.proMoney, 10) - parseInt(a.proMoney, 10);
 						});
 						PriceFalt = false;
+						$(this).children().find('i').removeClass().addClass('up');
 					}else{
 						res.sort(function(a,b){
 							return parseInt(a.proMoney, 10) - parseInt(b.proMoney, 10);
 						});
+						$(this).children().find('i').removeClass().addClass('down');
 						PriceFalt = true;
 					}
 					$(this).children().addClass("clickA")
@@ -450,7 +465,7 @@ $(function(){
 					str += '<div class="pro-assess-right">'+res[i].proAssess2+'</div>';
 					str += '</div>';
 					str += '<div class="pro-assess"><span>'+res[i].proAssess3+'</span></div>';
-					str += '<div class="pro-button"><a href="javascript:;">查看详情</a></div></div></li>';
+					str += '<div class="pro-button"><a href="javascript:;">加入购物车</a></div></div></li>';
 				}
 			}
 			str += '</ul>';

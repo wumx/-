@@ -153,6 +153,14 @@
 .sequence{
 	margin-top:20px;
 }
+.sequence.xiding{
+	margin-top:0px;
+	position: fixed;
+	top:0;
+	z-index: 100;
+	min-width: 1190px;
+	background: #fff;
+}
 /*左侧*/
 .sequence .sequence_left{
 	float:left;
@@ -194,8 +202,17 @@
 .sequence .sequence_left ul li a .i0{
 	background: url(../img_list/icon-xiala.png) no-repeat left center;
 }
+.sequence .sequence_left ul li a.clickA .i0{
+	background: url(../img_list/icon-xiala.png) no-repeat -14px center;
+}
 .sequence .sequence_left ul li a .i1{
 	background:url(../img_list/icon-xiala1.png) no-repeat left center;
+}
+.sequence .sequence_left ul li a .up{
+	background:url(../img_list/icon-xiala1.png) no-repeat -14px center;
+}
+.sequence .sequence_left ul li a .down{
+	background:url(../img_list/icon-xiala1.png) no-repeat -21px center;
 }
 /*中间*/
 .sequence .sequence_center{
