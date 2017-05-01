@@ -10,11 +10,13 @@
 	<script src="js/jquery-1.11.3.js"></script>
 	<script src="js/com.js"></script>
 	<script src="js/jquery.cookie.js"></script>
+	<script src="js/right-sideBar.js"></script>
+	<script src="js/tool.js"></script>
 	<script src="js/index.js"></script>
 </head>
 <body>
-<!-- 工具栏  -->
-	<div id="tools"></div>
+
+	@@include('tool.html')  <!-- 工具栏  -->
 <!-- 头部 -->
 	<div id="header">
 		<div class="head_wapper clearfix">
@@ -281,10 +283,9 @@
 			</div> <!-- 商品列表版心 end -->
 		</div> <!-- 商品列表外包层 end -->
 	</div> <!-- 商品列表id end  -->
-	<div id="footer"></div> <!-- footer end -->
 
-	<div id="shop-car"></div>
-<!-- 购物车 -->
+	@@include('footer.html') <!-- footer end -->
+	@@include('right-sideBar.html')  <!-- 购物车 -->
 </div>
 </body>
 </html>
